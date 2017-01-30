@@ -16,6 +16,8 @@ module Midy
         { name: "Lost.s03e10.Tricia Tanaka Is Dead.mkv", s: '03', e: '10' },
         { name: "TheWalkingDead-07x16-LastDayOnEarth.mkv", s: '07', e: '16' },
         { name: "The Man In The High Castle S02E01.mp4", s: '02', e: '01' },
+        { name: "ATLANTA - S01 E04 - The Streisand Effect (720p Web-DL).mp4", s: '01', e: '04' },
+        { name: "The Sopranos Season 1 Episode 05 - College.avi", s: '01', e: '05' },
       ]
     end
 
