@@ -24,8 +24,10 @@ module Midy
     end
 
     def test_sqaurex
+      s = season_number(:squarex)
       e = episode_number(:squarex)
       assert_equal e, '21'
+      assert_equal s, '02'
     end
 
     def test_sqaure
@@ -43,8 +45,10 @@ module Midy
     end
 
     def test_three_digit
+      s = season_number(:three_digit)
       e = episode_number(:three_digit)
       assert_equal e, '06'
+      assert_equal s, '02'
     end
   end
 end
