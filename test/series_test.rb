@@ -11,42 +11,65 @@ module Midy
       }
     end
 
-    def episode_number(type)
+    def random
+      [
+        {
+          name: "hawaii.five-0.2010.713.hdtv-lol[ettv].mkv",
+          e: '13',
+          s: '07',
+        },
+      ]
+    end
+
+    def test_random_one
+      sample = random[0]
+      f = sample[:name]
+      e_expected = sample[:e]
+      s_expected = sample[:s]
+
+      e = episode_number(f)
+      s = season_number(f)
+
+      assert_equal e_expected, e
+      assert_equal s_expected, s
+    end
+
+    def episode_number(file_name)
       Series
-        .new(file_name: example[type])
+        .new(file_name: file_name)
         .episode_number
     end
 
-    def season_number(type)
+    def season_number(file_name)
       Series
-        .new(file_name: example[type])
+        .new(file_name: file_name)
         .season_number
     end
 
     def test_sqaurex
-      s = season_number(:squarex)
-      e = episode_number(:squarex)
+      s = season_number(example[:squarex])
+      e = episode_number(example[:squarex])
       assert_equal e, '21'
       assert_equal s, '02'
     end
 
     def test_sqaure
-      s = season_number(:square)
-      e = episode_number(:square)
+      s = season_number(example[:square])
+      e = episode_number(example[:square])
       assert_equal e, '08'
       assert_equal s, '02'
     end
 
     def test_standard
-      s = season_number(:standard)
-      e = episode_number(:standard)
+      s = season_number(example[:standard])
+      e = episode_number(example[:standard])
       assert_equal e, '01'
       assert_equal s, '02'
     end
 
     def test_three_digit
-      s = season_number(:three_digit)
-      e = episode_number(:three_digit)
+      s = season_number(example[:three_digit])
+      e = episode_number(example[:three_digit])
       assert_equal e, '06'
       assert_equal s, '02'
     end
