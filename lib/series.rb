@@ -21,7 +21,8 @@ module Midy
     end
 
     def season_number
-      file_name.match(REGEX[:series_season_number])[:season_number]
+      s = file_name.match(REGEX[:series_season_number])[:season_number]
+      s.length == 1 ? "0#{s}" : s
     end
 
     def title

@@ -29,8 +29,10 @@ module Midy
     end
 
     def test_sqaure
+      s = season_number(:square)
       e = episode_number(:square)
       assert_equal e, '08'
+      assert_equal s, '02'
     end
 
     def test_standard
