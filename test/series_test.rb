@@ -11,7 +11,11 @@ module Midy
         { name: 'The Office [2.08] Performance Review.avi', e: '08', s: '02' },
         { name: 'The Simpsons [2x21] Three Men and a Comic Book.avi', e: '21', s: '02' },
         { name: 'Torrent-Downloaded-from-ExtraTorrent.cc.txt', e: nil, s: nil },
-        { name: 'Sherlock S4, Ep2-The Lying Detective.mkv', s: '04', e: '02' }
+        { name: 'Sherlock S4, Ep2-The Lying Detective.mkv', s: '04', e: '02' },
+        { name: 'Shadowhunters - S01 E11 - Blood Calls to Blood (720p HDTV).mp4', s: '01', e: '11' },
+        { name: "Lost.s03e10.Tricia Tanaka Is Dead.mkv", s: '03', e: '10' },
+        { name: "TheWalkingDead-07x16-LastDayOnEarth.mkv", s: '07', e: '16' },
+        { name: "The Man In The High Castle S02E01.mp4", s: '02', e: '01' },
       ]
     end
 
