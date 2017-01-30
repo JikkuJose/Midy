@@ -10,7 +10,8 @@ module Midy
         { name: 'the.flash.2014.306.hdtv-lol[ettv].mkv', e: '06', s: '03' },
         { name: 'The Office [2.08] Performance Review.avi', e: '08', s: '02' },
         { name: 'The Simpsons [2x21] Three Men and a Comic Book.avi', e: '21', s: '02' },
-        { name: 'Torrent-Downloaded-from-ExtraTorrent.cc.txt', e: nil, s: nil }
+        { name: 'Torrent-Downloaded-from-ExtraTorrent.cc.txt', e: nil, s: nil },
+        { name: 'Sherlock S4, Ep2-The Lying Detective.mkv', s: '04', e: '02' }
       ]
     end
 
@@ -23,8 +24,8 @@ module Midy
         e = episode_number(f)
         s = season_number(f)
 
-        assert_equal e_expected, e, "File name: #{f}"
-        assert_equal s_expected, s, "File name: #{f}"
+        assert_equal e_expected, e, "Wrong episode for: #{f}"
+        assert_equal s_expected, s, "Wrong season for: #{f}"
       end
     end
 

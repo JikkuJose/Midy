@@ -18,7 +18,10 @@ module Midy
 
     def episode_number
       match_result = file_name.match(REGEX[:series_episode_number])
-      match_result[:episode_number] if match_result
+      return nil unless match_result
+
+      e = match_result[:episode_number]
+      e.length == 2 ? e : "0#{e}"
     end
 
     def season_number
